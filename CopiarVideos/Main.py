@@ -19,7 +19,6 @@ chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 # chrome_options.add_argument("--window-size=1920,1080")
 
-##link:  https://www.youtube.com/watch?v=FmrasWVUvC0&list=PLLT61SHdeQXuxTYMoLSTrT0kRCChHpc0W   ##
 
 ##ENTRANDO NO LINK E PEGANDO DADOS##
 while True:
