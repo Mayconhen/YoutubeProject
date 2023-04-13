@@ -19,8 +19,9 @@ chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 # chrome_options.add_argument("--window-size=1920,1080")
 
+##link:  https://www.youtube.com/watch?v=FmrasWVUvC0&list=PLLT61SHdeQXuxTYMoLSTrT0kRCChHpc0W   ##
 
-##ENTRANDO NO LINK E PEGANDO DADOS##
+##ENTRANDO NO LINK E PEGANDO DADOS###
 while True:
     link = input("Cole o link do vídeo:\n")
     if link != None:
@@ -37,7 +38,8 @@ janela.find_element('xpath', '//*[@id="expand"]').click()
 time.sleep(2)
 descricao = janela.find_element('xpath', '//*[@id="description-inline-expander"]')
 descricao = descricao.text
-titulo = titulo.text
+titulomais = ("Copia python")
+titulo = titulo.text + titulomais
 
 janela.close()
 
@@ -46,7 +48,7 @@ yt = pytube.YouTube(link)
 yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download(filename='video.mp4')
 
 channel = Channel()
-channel.login("client_server2.json", "credentials.storage")
+channel.login("client_server.json", "credentials.storage")
 
 # setting up the video that is going to be uploaded
 video = LocalVideo(file_path="video.mp4")
